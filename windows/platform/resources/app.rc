@@ -1,0 +1,4 @@
+// Windows resource for HackPass.exe.
+// IDI_ICON1 = 1 by Windows convention; Windows Explorer + the taskbar
+// pinner use whichever ICON resource has the lowest id.
+IDI_ICON1 ICON "../../../shared/assets/icon.ico"

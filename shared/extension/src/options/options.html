@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HackPass options</title>
+<style>
+:root {
+  --bg:         #14141A;
+  --surface:    #1A1A22;
+  --foreground: #E4E4E8;
+  --muted:      #8A8A93;
+  --accent:     #7895B5;
+  --border:     #33333E;
+  --warning:    #C9A876;
+  --warning-bg: #2A1F10;
+}
+.warning-callout {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+.warning-callout strong { color: var(--warning); }
+body {
+  margin: 0;
+  font-family: "Segoe UI Variable", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--foreground);
+  padding: 32px;
+}
+h1   { font-size: 20px; font-weight: 600; }
+p    { color: var(--muted); max-width: 600px; line-height: 1.5; }
+label { display: block; margin-top: 24px; font-size: 12px; color: var(--muted); }
+input {
+  width: 480px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 13px;
+}
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: var(--bg);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+#status { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.brand-tag {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: none;
+}
+.brand-tag:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <h1>HackPass extension</h1>
+  <div class="warning-callout">
+    <strong>Warning:</strong> HackPass is intentionally vulnerable. It exists for runtime instrumentation and security research, not to manage real passwords. Do not connect this extension to a vault that holds credentials you actually use.
+  </div>
+  <p>Paste the handshake token shown in the HackPass desktop app's first-run wizard. Without this, the extension cannot reach your vault.</p>
+  <label for="token">Handshake token</label>
+  <input id="token" type="text" placeholder="32 hex characters">
+  <div>
+    <button id="save">Save</button>
+    <button id="test">Test connection</button>
+  </div>
+  <div id="status"></div>
+  <a class="brand-tag" href="https://samanl33t.com" target="_blank" rel="noopener">by @samanl33t</a>
+  <script src="options.js" type="module"></script>
+</body>
+</html>

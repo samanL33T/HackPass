@@ -1,0 +1,7 @@
+node_modules/
+data/certs/
+data/vaults/
+data/devices.json
+hackpass-server-*-x64
+hackpass-server-*-x64.exe
+bun.lock

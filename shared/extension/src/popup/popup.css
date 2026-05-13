@@ -1,0 +1,64 @@
+:root {
+  --bg:         #14141A;
+  --surface:    #1A1A22;
+  --foreground: #E4E4E8;
+  --muted:      #8A8A93;
+  --accent:     #7895B5;
+  --border:     #33333E;
+  --warning:    #C9A876;
+  --warning-bg: #2A1F10;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 320px;
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  background: var(--bg);
+  color: var(--foreground);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.brand    { font-weight: 600; font-size: 14px; }
+.warning-strip {
+  background: var(--warning-bg);
+  color: var(--warning);
+  font-size: 11px;
+  text-align: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.state    { font-family: "Cascadia Mono", Consolas, monospace; font-size: 11px; color: var(--muted); }
+main      { padding: 8px 16px; min-height: 120px; }
+.hint     { color: var(--muted); font-style: italic; padding: 16px 0; text-align: center; font-size: 12px; }
+ul#entries { list-style: none; padding: 0; margin: 0; }
+li {
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+li:hover { background: var(--surface); }
+li .title    { font-weight: 500; }
+li .username { color: var(--muted); font-family: "Cascadia Mono", Consolas, monospace; font-size: 11px; }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 11px;
+}
+footer .brand-tag {
+  color: var(--muted);
+  font-size: 11px;
+}
+footer .brand-tag:hover { color: var(--accent); }

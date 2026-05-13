@@ -1,0 +1,89 @@
+# Build outputs
+build/
+build-*/
+out/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+Makefile
+*.exe
+*.dll
+*.pdb
+*.lib
+*.exp
+*.obj
+*.o
+*.a
+
+# Qt
+*.user
+*.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+.qtc_clangd/
+
+# IDE
+.vscode/
+.vs/
+.idea/
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+.ccls-cache/
+compile_commands.json
+
+# Backend (Node)
+node_modules/
+dist/
+.bun/
+bun.lock
+package-lock.json
+yarn.lock
+
+# Backend runtime data - never commit
+shared/backend/data/
+
+# Extension build outputs
+shared/extension/dist/
+shared/extension/*.zip
+
+# Release artefacts (Windows)
+windows/installer/stage/
+windows/installer/output/
+HackPass-Setup-*.exe
+HackPass-Portable-*.zip
+
+# Release artefacts (macOS)
+mac/release/
+*.dmg
+
+# Generic
+releases/
+*.zip
+hackpass-server-*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Private notes - vuln catalog stays local
+shared/docs/Vulnerabilities.md
+
+# Internal docs - design rationale stays local
+ARCHITECTURE.md
+BACKEND.md
+
