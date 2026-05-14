@@ -10,6 +10,8 @@ It looks and behaves like a real password manager (vault, browser autofill, sync
 
 > **Warning.** HackPass is intentionally vulnerable. It is a research target, not a password manager. Do not store real credentials in it. Do not run it on a machine where a compromise would matter. Every release contains deliberate weaknesses and the binary is unsigned; SmartScreen will warn you, and that is expected.
 
+Blog: https://blog.samanl33t.com/writings/0x0002-introducing-hackpass/
+
 ## Screenshots
 
 | First-run wizard | Login | Vault |
